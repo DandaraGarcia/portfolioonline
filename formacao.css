@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', monospace, sans-serif;
+  font-style: normal;
+  background-color: #001322;
+  color: #222;
+}
+
+/* header*/
+.topo {
+  background-color: #001322;
+  padding: 20px 200px;
+  position: sticky;
+  /* Fica fixo no topo ao rolar a página */
+  top: 0px;
+  z-index: 5000;
+}
+
+/*  NAV  */
+#navbar {
+  display: flex;
+  /* pra ficar um do lado do outro */
+  justify-content: space-between;
+  /* pra o h1 ficar na esquerda e os botôes na direita */
+  align-items: center;
+}
+
+#tituloprincipal {
+  font-weight: 800;
+  color: #fff9ec;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+#navbar ul {
+  list-style: none;
+  /* pra n ficar a bolinha das listas n ordenadas*/
+  display: flex;
+  /* fica um do lado do outro*/
+  gap: 60px;
+  /* Espaçamento entre os botoes */
+}
+
+/* LINKS  */
+#navbar a {
+  text-decoration: none;
+  color: #fff9ec;
+  font-weight: 100;
+  font-size: 20px;
+  position: static;
+}
+
+#navbar a:hover {
+  transition: all 0.2s linear;
+  color: #BB396D;
+}
+
+/* ate aqui foi só a configuração da NAV, agora o resto
+são as seções com conteúdo */
+
+/* fundos 3 formaçoes minhas*/
+
+#fundo1 {
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff9ec;
+  width: 100%;
+  height: 200px;
+  background-color: #173753;
+}
+
+/*Formaçao academica...*/
+h2 {
+  font-size: 400%;
+  height: 80px;
+}
+
+/*Nessa seção, você encontrará...*/
+#sessao {
+  font-size: 120%;
+  margin-right: 400px;
+  width: 30%;
+  height: 30%;
+
+}
+
+.p {
+  font-size: 180%;
+  color: #fff9ec;
+  width: auto;
+  padding: 10%;
+}
+
+#p1 {
+  color: #fff9ec;
+  background-color: #173753;
+}
+
+#p2 {
+  color: #001322;
+  background-color: #fff9ec;
+}
+
+#p3 {
+  color: #fff9ec;
+  background-color: #001322;
+}
+
+.textbase {
+  font-weight: 100;
+  text-align: justify;
+}
+
+
+
+/* footer o "pé" do site */
+
+.footer {
+  background-color: #fff9ec;
+  /* Fundo escuro */
+  color: #001322;
+  /* Texto branco */
+  padding: 40px 20px;
+  /* Espaçamento interno */
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite quebra de linha em telas pequenas */
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  /* Cada seção ocupa pelo menos 250px */
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #001322;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #BB396D;
+  /* Cor de destaque ao passar o mouse */
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.logo {
+    width: 50px;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #BB396D;
+}
+
+/* ========== 📱 CELULARES (320px a 480px) ========== */
+@media (max-width: 499px) {
+  body {
+    font-size: 14px;
+  }
+
+  .topo {
+    padding: 10px 20px;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #tituloprincipal {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #fundo1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  h2 {
+    font-size: 200%;
+  }
+
+  #sessao {
+    width: 90%;
+    margin: 10px auto 0;
+    font-size: 16px;
+  }
+
+  .p {
+    font-size: 16px;
+    padding: 30px 20px;
+    text-align: justify;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    width: 40px;
+  }
+}
+
+/* ========== 💻 TABLETS (500px a 900px) ========== */
+@media (min-width: 500px) and (max-width: 1000px) {
+  .topo {
+    padding: 15px 40px;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #navbar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #tituloprincipal {
+    font-size: 26px;
+    text-align: center;
+  }
+  
+  h2 {
+    padding-bottom: 30%;
+  }
+
+  #fundo1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 250%;
+  }
+
+  #sessao {
+    font-size: 18px;
+    width: 70%;
+    margin: 20px 0;
+  }
+
+  .p {
+    font-size: 18px;
+    padding: 60px;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-section {
+    width: 45%;
+    margin: 15px;
+  }
+
+  .logo {
+    width: 45px;
+  }
+}
+
+/* ========== 🖥️ DESKTOPS (1020px a 1890px) ========== */
+@media (min-width: 1001px) and (max-width: 1890px) {
+  #navbar ul {
+    gap: 40px;
+  }
+
+  #tituloprincipal {
+    font-size: 30px;
+  }
+
+
+  #fundo1 {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 50px;
+   
+  }
+
+  h2 {
+    font-size: 300%;
+  }
+
+  #sessao {
+    margin-right: 25%;
+    width: 500px;
+    height: auto;
+    font-size: 20px;
+  }
+
+  .p {
+    font-size: 20px;
+    padding: 8%;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    width: auto;
+  }
+}

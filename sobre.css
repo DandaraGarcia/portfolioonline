@@ -1,0 +1,629 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', monospace, sans-serif;
+  font-style: normal;
+  background-color: #fff9ec;
+  color: #222;
+}
+
+/* header*/
+.topo {
+  width: 100%;
+  background-color: #001322;
+  padding: 20px 200px;
+  position: sticky;
+  /* Fica fixo no topo ao rolar a página */
+  top: 0px;
+  z-index: 5000;
+}
+
+/*  NAV  */
+#navbar {
+  display: flex;
+  /* pra ficar um do lado do outro */
+  justify-content: space-between;
+  /* pra o h1 ficar na esquerda e os botôes na direita */
+  align-items: center;
+}
+
+#tituloprincipal {
+  font-weight: 800;
+  color: #fff9ec;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+#navbar ul {
+  list-style: none;
+  /* pra n ficar a bolinha das listas n ordenadas*/
+  display: flex;
+  /* fica um do lado do outro*/
+  gap: 60px;
+  /* Espaçamento entre os botoes */
+}
+
+/* LINKS  */
+#navbar a {
+  text-decoration: none;
+  color: #fff9ec;
+  font-weight: 100;
+  font-size: 20px;
+  position: static;
+}
+
+#navbar a:hover {
+  transition: all 0.2s linear;
+  color: #BB396D;
+}
+
+/* ate aqui foi só a configuração da NAV, agora o resto
+são as seções com conteúdo */
+
+
+/* tela de img do codigo de fundo, minha foto e texto 
+apresentativo sobre mim*/
+#sobre {
+  /*section class=sobre mim parte superior*/
+  display: grid;
+  grid-template-columns: 137px 380px 88px 816px 254px 230px;
+  grid-template-rows: 233px 25px 70px 45px 45px 300px 25px 150px;
+  background-color: #fff9ec;
+  z-index: 1;
+}
+
+#imgcodigo {
+  /*div*/
+  background-image: url("img_portfolio/codigopng.png");
+  background-size: cover;
+  background-position: top;
+  grid-column: 1 / 7;
+  grid-row: 1 /5;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+#minhafoto {
+  outline: 40px solid #fff9ec;
+  border: 10px solid #001322;
+  background-image: url("img_portfolio/img1.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  grid-column: 2 / 2;
+  grid-row: 2/7;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+/*algumas palavras nos textos ficam rosa*/
+.textrosa {
+  color: #BB396D;
+}
+
+
+#h2dan {
+  text-align: left;
+  font-size: 3vw;
+  font-weight: 600;
+  color: #fff9ec;
+  grid-column: 4 / 4;
+  grid-row: 3/3;
+  z-index: 3;
+}
+
+
+#infotext {
+  text-align: justify;
+  font-size: 23px;
+  font-family: 'Poppins', monospace, sans-serif;
+  font-weight: 100;
+  color: #001322;
+  grid-column: 4 / 4;
+  grid-row: 6/6;
+  z-index: 3;
+}
+
+/* ate aqui foi a tela de img do codigo de fundo, minha foto e texto 
+apresentativo sobre mim*/
+
+/*um pouco mais sobre mim e fotos de hobbies com elegenda ao efeito hover*/
+
+#sobre1 {
+  background-color: #001322;
+  height: 900px;
+}
+
+#div1 {
+  display: flex;
+  background-color: #001322;
+  justify-content: flex-start;
+}
+
+
+/*texto um pouco mais sobre mim...*/
+#umpoucomais {
+  padding: 90px;
+  color: #fff9ec;
+  font-size: 200%;
+  font-weight: 100;
+  width: 100%;
+
+}
+
+/*4 imagens dos meus hobbies*/
+
+#img4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.img4 li {
+  display: flex;
+  flex-direction: column;
+  /* Coloca a imagem em cima e o texto embaixo */
+  align-items: center;
+  /* Centraliza tudo no eixo horizontal */
+}
+
+.img4 img {
+  border: 10px solid #173753;
+  width: 300px;
+  /* Tamanho da imagem */
+  height: auto;
+  border-radius: 10px;
+  /* Bordas arredondadas (opcional) */
+}
+
+.img4 p {
+  background-color: #001322;
+  width: 300px;
+  margin-top: 8px;
+  /* Espaço entre a imagem e o texto */
+  font-size: 16px;
+  text-align: center;
+  color: #BB396D;
+}
+
+/* footer o "pé" do site */
+
+.footer {
+  background-color: #fff9ec;
+  /* Fundo escuro */
+  color: #001322;
+  /* Texto branco */
+  padding: 40px 20px;
+  /* Espaçamento interno */
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite quebra de linha em telas pequenas */
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  /* Cada seção ocupa pelo menos 250px */
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #001322;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #BB396D;
+  /* Cor de destaque ao passar o mouse */
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.logo {
+  width: 50px;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #BB396D;
+}
+
+/*para desktops menores*/
+
+
+
+@media (min-width: 901px) and (max-width: 1600px) {
+
+
+
+  .topo {
+    padding: 10px 20px;
+    height: fit-content;
+  }
+
+  #navbar {
+    gap: 15px;
+    justify-content: center;
+    /* Centraliza para melhor ajuste */
+  }
+
+  #navbar ul {
+    gap: 20px;
+    /* Espaçamento médio */
+  }
+
+  #tituloprincipal {
+    font-size: 25px;
+    /* Fonte menor que desktop */
+  }
+
+  #navbar a {
+    font-size: 15px;
+    /* Fonte menor */
+  }
+
+  #minhafoto {
+    border:20px solid #001322;
+    width: auto;
+    height: 100%;
+  }
+
+  #sobre {
+    overflow: hidden;
+    width: 100%;
+    /*section class=sobre mim parte superior*/
+    display: grid;
+    grid-template-columns: (24, 1fr);
+    grid-template-rows: 233px 25px 70px 45px 45px 300px 25px 150px;
+    background-color: #fff9ec;
+    z-index: 1;
+  }
+
+  #imgcodigo {
+    display: none;
+  }
+
+
+  #h2dan {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: fit-content;
+    color: #BB396D;
+    padding: 5px;
+    font-size: 200%;
+    /* Ajusta tamanho */
+
+  }
+
+  #infotext {
+    border:5px solid #BB396D;
+    width: 40%;
+    text-wrap: wrap;
+    font-size: 80%;
+    padding: 5%;
+
+  }
+
+  #umpoucomais {
+    font-size: 200%;
+    /* Fonte menor */
+    padding: 50px;
+  }
+
+  #img4 {
+    height: fit-content;
+    flex-wrap: wrap;
+    gap: 50px;
+    /* Espaçamento médio */
+  }
+
+  .img4 img {
+    width: 150px;
+    /* Imagens menores */
+  }
+
+  .img4 p {
+
+    width: 250px;
+  }
+
+
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza seções */
+  }
+
+  .footer-section {
+    margin: 0px;
+  }
+}
+
+/*o nome quem é dandara não tava quebrando*/
+
+@media (min-width: 901px) and (max-width: 1030px) {
+
+  #h2dan {
+    width: fit-content;
+    width: 50%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 1px;
+    color: #BB396D;
+    font-size: 200%;
+  }
+
+}
+
+/* Estilos para telas de 501px a 900px (tablets) */
+
+
+
+@media (min-width: 501px) and (max-width: 900px) {
+
+  body {
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .topo {
+    padding: 10px 20px;
+    height: fit-content;
+  }
+
+  #navbar {
+    gap: 15px;
+    justify-content: center;
+    /* Centraliza para melhor ajuste */
+  }
+
+  #navbar ul {
+    gap: 20px;
+    /* Espaçamento médio */
+  }
+
+  #tituloprincipal {
+    font-size: 25px;
+    /* Fonte menor que desktop */
+  }
+
+  #navbar a {
+    font-size: 15px;
+    /* Fonte menor */
+  }
+
+  #sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+
+  }
+
+  #imgcodigo {
+    display: none;
+    /* Ocupa as 3 colunas */
+  }
+
+  #minhafoto {
+
+    width: 50%;
+    height: 500px;
+  }
+
+  #h2dan {
+    color: #BB396D;
+    font-size: 250%;
+    /* Ajusta tamanho */
+
+  }
+
+  #infotext {
+    font-size: 20px;
+    /* Fonte menor */
+    padding: 5%;
+  }
+
+  #umpoucomais {
+    font-size: 200%;
+    /* Fonte menor */
+    padding: 50px;
+  }
+
+  #img4 {
+    height: fit-content;
+
+    gap: 50px;
+    /* Espaçamento médio */
+  }
+
+  .img4 img {
+    width: 150px;
+    /* Imagens menores */
+  }
+
+  .img4 p {
+
+    width: 250px;
+  }
+
+
+  .footer-container {
+    justify-content: center;
+    /* Centraliza seções */
+  }
+
+  .footer-section {
+    margin: 0px;
+  }
+}
+
+
+
+
+
+/* Estilos para celular */
+
+
+
+
+
+@media (max-width: 500px) {
+  body {
+    background-color: #001322;
+    /* Mantém o tema original */
+    color: #222;
+    /* Mantém o tema original */
+  }
+
+  .topo {
+    padding: 10px;
+    /* Reduz padding para economizar espaço */
+    width: 100%;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tituloprincipal {
+    font-size: 20px;
+    /* Fonte menor */
+    letter-spacing: 1px;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    /* Espaçamento menor */
+  }
+
+  #navbar a {
+    font-size: 15px;
+  }
+
+  #sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    /* Ajusta automaticamente */
+  }
+
+  #imgcodigo {
+    display: none;
+    /* Esconde o fundo para simplificar */
+  }
+
+  #minhafoto {
+    width: 50%;
+    /* Maior visibilidade */
+    height: 300px;
+    /* Mantém proporcional */
+    border: 5px solid #001322;
+    /* Bordas menores */
+  }
+
+  #h2dan {
+    color: #BB396D;
+    font-size: 20px;
+    /* Fonte menor */
+    text-align: center;
+  }
+
+  #infotext {
+    font-size: 16px;
+    /* Fonte menor */
+    text-align: center;
+    /* Centraliza para melhor leitura */
+    width: 90%;
+    /* Evita overflow */
+  }
+
+  #sobre1 {
+    height: auto;
+    /* Não fixa altura */
+  }
+
+  #umpoucomais {
+    font-size: 120%;
+    /* Fonte menor */
+    padding: 20px;
+  }
+
+  #img4 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .img4 img {
+    width: 100%;
+    /* Responsiva */
+    max-width: 300px;
+    /* Limite para não distorcer */
+  }
+
+  .img4 p {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    /* Ocupa toda a largura */
+    margin: 10px 0;
+  }
+}

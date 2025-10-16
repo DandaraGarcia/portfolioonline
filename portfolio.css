@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', monospace, sans-serif;
+  font-style: normal;
+  background-color: #001322;
+  color: #222;
+}
+
+/* header*/
+.topo {
+  background-color: #001322;
+  padding: 20px 200px;
+  position: sticky;
+  /* Fica fixo no topo ao rolar a página */
+  top: 0px;
+  z-index: 5000;
+}
+
+/*  NAV  */
+#navbar {
+  display: flex;
+  /* pra ficar um do lado do outro */
+  justify-content: space-between;
+  /* pra o h1 ficar na esquerda e os botôes na direita */
+  align-items: center;
+}
+
+#tituloprincipal {
+  font-weight: 800;
+  color: #fff9ec;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+#navbar ul {
+  list-style: none;
+  /* pra n ficar a bolinha das listas n ordenadas*/
+  display: flex;
+  /* fica um do lado do outro*/
+  gap: 60px;
+  /* Espaçamento entre os botoes */
+}
+
+/* LINKS  */
+#navbar a {
+  text-decoration: none;
+  color: #fff9ec;
+  font-weight: 100;
+  font-size: 20px;
+  position: static;
+}
+
+#navbar a:hover {
+  transition: all 0.2s linear;
+  color: #BB396D;
+}
+
+/* ate aqui foi só a configuração da NAV, agora o resto
+são as seções com conteúdo */
+
+/*titulo da pagina e descrição*/
+#fundo1 {
+  width: 100%;
+  background-color: #fff9ec;
+  color: #001322;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+#h1portfolio {
+  display: block;
+  width: 45%;
+  min-width: 250px;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#sessao {
+  display: block;
+  width: 45%;
+  min-width: 250px;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: justify;
+  margin-top: 2%;
+}
+
+/* parte dos 2 conteiners com foto e descrição 
+dos meus 2 projetos, o de turismo e o portfólio*/
+
+/*projeto site turismo*/
+#conteinercima {
+  background-color: #fff9ec;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#conteinercima1 {
+  width: 90%;
+  margin: 3%;
+  padding: 3%;
+  gap: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #001322;
+  border-radius: 10px;
+}
+
+#text1 {
+  font-size: 15px;
+  color: #001322;
+  text-align: left;
+  height: auto;
+  width: 500px;
+}
+
+#diva {
+  margin-left: 6vw;
+  padding-bottom: 1vw;
+}
+
+#git {
+  text-wrap: nowrap;
+  width: fit-content;
+  margin: 50%;
+  padding: 10%;
+  color: #001322;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/*um efeito bonito ao passar o mouse em cima
+do meu link de acesso ao meu site de turismo*/
+#git:hover {
+  font-style: italic;
+  font-weight: 900;
+  color: #BB396D;
+}
+
+
+/*projeto site portfólio*/
+#conteinerbaixo {
+  background-color: #001322;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#conteinerbaixo1 {
+  width: 90%;
+  margin: 3%;
+  padding: 3%;
+  gap: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #fff9ec;
+  border-radius: 10px;
+}
+
+#text2 {
+  font-size: 15px;
+  color: #fff9ec;
+  text-align: left;
+  height: auto;
+  width: 500px;
+}
+
+.img {
+  width: 400px;
+  height: auto;
+}
+
+#branca {
+  border: 5px solid #001322;
+  border-radius: 10px;
+}
+
+#escura {
+  border: 5px solid #fff9ec;
+  border-radius: 10px;
+}
+
+
+/* footer o "pé" do site */
+.footer {
+  background-color: #fff9ec;
+  /* Fundo escuro */
+  color: #001322;
+  /* Texto branco */
+  padding: 40px 20px;
+  /* Espaçamento interno */
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite quebra de linha em telas pequenas */
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  /* Cada seção ocupa pelo menos 250px */
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #001322;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #BB396D;
+  /* Cor de destaque ao passar o mouse */
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.logo {
+  width: 50px;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #BB396D;
+}
+
+
+/*  Responsividade para telas pequenas (320px a 700px) */
+@media only screen and (min-width: 320px) and (max-width: 700px) { 
+
+  /* estrutura geral */
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  .topo {
+    padding: 15px 20px;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  #tituloprincipal {
+    font-size: 22px;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #navbar a {
+    font-size: 16px;
+  }
+
+  /* seção de abertura */
+  #fundo1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    gap: 10px;
+  }
+
+  #h1portfolio {
+    font-size: 36px;
+    width: 100%;
+  }
+
+  #sessao {
+    width: 100%;
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  /* projetos */
+  #conteinercima1,
+  #conteinerbaixo1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+  }
+
+  #text1,
+  #text2 {
+    width: 100%;
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  #diva {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  #git {
+    margin: 0;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  /* rodapé */
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .logo {
+    width: 35px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+}
+
+
+
+/* Media Query para Tablets (481px a 900px) */
+@media only screen and (min-width: 481px) and (max-width: 900px) {
+  body {
+    font-size: 16px;
+    /* Ajuste intermediário */
+  }
+
+  .topo {
+    padding: 20px 50px;
+  }
+
+  #navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #tituloprincipal {
+    font-size: 28px;
+  }
+
+  #navbar ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  #navbar a {
+    font-size: 18px;
+  }
+
+  #fundo1 {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  #h1portfolio {
+    font-size: 60px;
+  }
+
+  #sessao {
+    font-size: 16px;
+  }
+
+  #conteinercima1,
+  #conteinerbaixo1 {
+    flex-direction: row;
+    /* Horizontal para tablets */
+    gap: 20px;
+  }
+
+  .img {
+    width: 50%;
+    /* Metade da largura */
+  }
+
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1 1 40%;
+  }
+
+  .logo {
+    width: 40px;
+  }
+}
+
+
+
+/* Media Query para Desktops (1020px e acima) */
+@media only screen and (min-width: 1020px) {
+  body {
+    font-size: 18px;
+  }
+
+  .topo {
+    padding: 20px 200px;
+  }
+
+  #navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #tituloprincipal {
+    font-size: 30px;
+  }
+
+  #navbar ul {
+    gap: 60px;
+  }
+
+  #navbar a {
+    font-size: 20px;
+  }
+
+  #fundo1 {
+    padding: 40px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #h1portfolio {
+    width: 45%;
+    font-size: 80px;
+  }
+
+  #sessao {
+    width: 45%;
+    font-size: 15px;
+  }
+
+  #conteinercima1,
+  #conteinerbaixo1 {
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  #text1,
+  #text2 {
+    width: 500px;
+  }
+
+  .img {
+    width: 400px;
+  }
+
+  .footer-container {
+    justify-content: space-around;
+  }
+
+  .footer-section {
+    flex: 1 1 250px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+}
